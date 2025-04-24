@@ -31,7 +31,7 @@ public class Assignment_3 {
 		
 	    // Print the title after the login
 	    String pageTitle = driver.getTitle();
-	    System.out.println("Page Title After The  Login: " + pageTitle);
+	    System.out.println("Page Title After Login: " + pageTitle);
 	    
 	    Thread.sleep(3000);
 	    
