@@ -1,7 +1,5 @@
 package automationbatch;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,7 +31,7 @@ public class Assignment_3 {
 		
 	    // Print the title after the login
 	    String pageTitle = driver.getTitle();
-	    System.out.println("Page Title After Login: " + pageTitle);
+	    System.out.println("Page Title After The  Login: " + pageTitle);
 	    
 	    Thread.sleep(3000);
 	    
