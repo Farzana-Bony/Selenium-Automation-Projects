@@ -34,9 +34,9 @@ public class Assignment_6 {
 		  
 		  assert radioButton.isSelected();
 		  
-		  System.out.println("radio button : " + radioButton.isSelected());
+		  System.out.println("Selected radio button : " + radioButton.isSelected());
 		  
-	   //dropdown
+	   //static dropdown
 		  
 	      // Locate the dropdown element
 	      WebElement dropdown = driver.findElement(By.id("option")); 
@@ -49,35 +49,43 @@ public class Assignment_6 {
 	      
 	      // Optional: Verify selection
 	        WebElement selectedOption = select.getFirstSelectedOption();  //It returns the first selected option in the dropdown
-	        System.out.println("Selected option: " + selectedOption.getText());
+	        System.out.println("Selected dropdown option: " + selectedOption.getText());
+	    
+	   	 //dropdown1	  
+	        
+			   // Locate the dropdown element
+			   WebElement dropdown1 = driver.findElement(By.id("owc")); 
+			   
+			   // Create Select instance
+			   Select options1 = new Select(dropdown1);
+			   
+			   // Select by visible text
+			   options1.selectByVisibleText("Option 1");
+			   
+			    // Optional: Verify selection
+		        WebElement selectedOption1 = options1.getFirstSelectedOption();  //It returns the first selected option in the dropdown
+		        System.out.println("Selected dropdown1 option: " + selectedOption1.getText());
 		  
-		  
-         //WebElement checkboxBtn = driver.findElement(By.xpath("//option[@value='option 2']"));
-		 //checkboxBtn.click(); 
-		 //assert checkboxBtn.isSelected(); 
-		 //System.out.println(checkboxBtn.isSelected());
 		 
 	  //checkbox - multiple
          
 	        
-	     // Locate checkboxes
-	     WebElement checkbox1 = driver.findElement(By.name("option1"));
-	     WebElement checkbox3 = driver.findElement(By.name("option3"));
+	    // Locate checkboxes
+	       //WebElement checkbox1 = driver.findElement(By.name("option1"));
+	       WebElement checkbox1 = driver.findElement(By.xpath("(//input[@id='moption'])[1]")); 
+	       checkbox1.click();
+	     
+	     
+	       //WebElement checkbox3 = driver.findElement(By.name("option3"));
+	       WebElement checkbox3 = driver.findElement(By.xpath("(//input[@id='moption'])[3]"));
+	       checkbox3.click();
 		 
-		 Thread.sleep(3000);
-		 
-	     // Tick checkboxes if not already selected
-	        if (!checkbox1.isSelected()) {
-	            checkbox1.click();
-	        }
-
-	        if (!checkbox3.isSelected()) {
-	            checkbox3.click();
-	        }
+	       Thread.sleep(3000);
 	        
-	        Thread.sleep(3000);
+	 	   assert checkbox1.isSelected();
+	 	   assert checkbox3.isSelected();
 		  
-	      // Confirm they are checked
+	    // Confirm they are checked
 	        System.out.println("Checkbox 1 selected: " + checkbox1.isSelected());
 	        System.out.println("Checkbox 3 selected: " + checkbox3.isSelected());
 		  
@@ -131,7 +139,7 @@ public class Assignment_6 {
 	        
 	     //Optional: Check for confirmation message
 	        try {
-	            WebElement confirmation = driver.findElement(By.id("confirmationMessage")); // Replace with actual ID/class
+	            WebElement confirmation = driver.findElement(By.id("confirmationMessage")); 
 	            System.out.println("Form submitted successfully: " + confirmation.getText());
 	        } catch (Exception e) {
 	            System.out.println("Confirmation message not found.");
