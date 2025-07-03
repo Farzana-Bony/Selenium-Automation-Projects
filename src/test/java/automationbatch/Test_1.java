@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Assignment_3 {
+public class Test_1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Assignment_6 {
+public class Test_4 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub

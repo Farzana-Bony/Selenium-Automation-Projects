@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Assignment_5 {
+public class Test_3 {
 	
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
